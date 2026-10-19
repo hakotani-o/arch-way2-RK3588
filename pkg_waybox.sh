@@ -25,7 +25,7 @@ if [ $mem_size -gt 13 ]; then
         sudo mount -t tmpfs -o size=8G tmpfs base_camp
 fi
 sudo pacstrap ./base_camp base sudo arch-install-scripts archlinux-keyring
-sudo cp rockchip-waybox.sh wlroots0.20-10:0.20.2-1-aarch64.pkg.tar.xz ./base_camp
+sudo cp rockchip-waybox.sh  ./base_camp
 sudo cp -a etc keyrings ./base_camp
 sudo mkdir -p ./base_camp/MY-rockchip
 sudo systemd-nspawn -D ./base_camp --resolv-conf=replace-host --as-pid2 /rockchip-waybox.sh
