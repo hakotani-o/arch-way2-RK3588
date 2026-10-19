@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<menu id="root-menu" label="Waybox">
+  <!-- 💡 Terminal を foot から qterminal に変更 -->
+  <item label="Terminal" icon="qterminal">
+    <action name="Execute">
+      <execute>qterminal</execute>
+    </action>
+  </item>
+  
+  <item label="Run" icon="system-run">
+    <action name="Execute">
+      <execute>rofi -show drun</execute>
+    </action>
+  </item>
+  
+  <!-- 💡 Web Browser をお好みで（現在はデフォルトのブラウザを開く設定） -->
+  <item label="Web Browser" icon="web-browser">
+    <action name="Execute">
+      <execute>xdg-open https://google.com</execute>
+    </action>
+  </item>
+  
+  <!-- 💡 Files を pcmanfm-qt に直接指定 -->
+  <item label="Files" icon="system-file-manager">
+    <action name="Execute">
+      <execute>pcmanfm-qt</execute>
+    </action>
+  </item>
+
+  <separator/>
+
+  <item label="Configure" icon="preferences-system">
+    <action name="Execute">
+      <execute>wbconf</execute>
+    </action>
+  </item>
+
+  <menu id="waybox-menu" label="Waybox" icon="applications-system">
+    <item label="Reconfigure" icon="view-refresh">
+      <action name="Reconfigure"/>
+    </item>
+    <item label="Exit" icon="application-exit">
+      <action name="Exit"/>
+    </item>
+  </menu>
+</menu>
+
+</openbox_menu>
+
