@@ -10,8 +10,7 @@ pacman-key --populate archlinuxarm
 pacman -Syyu --noconfirm
 
 # 必要なパッケージのインストール
-pacman -S --noconfirm --need base-devel pacman-contrib wget git devtools cairo pango librsvg gtk4
-yes | pacman -U wlroots0.20-10:0.20.2-1-aarch64.pkg.tar.xz
+pacman -S --noconfirm --need base-devel pacman-contrib wget git devtools cairo pango librsvg gtk4 seatd
 
 # ビルド用一般ユーザー「builder」の作成とsudo権限付与
 useradd -m -G wheel builder
