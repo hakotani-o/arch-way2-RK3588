@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<waybox>
+  <keyboard>
+    <!-- 💡 Superキーではなく、Alt + T (A-t) で qterminal を起動 -->
+    <keybind key="A-t">
+      <action name="Execute">
+        <!-- QT_QPA_PLATFORMを強制指定して確実に起動させる -->
+        <command>env QT_QPA_PLATFORM=wayland qterminal</command>
+      </action>
+    </keybind>
+
+    <!-- 💡 Alt + F2 でファイルマネージャーを起動（テスト用） -->
+    <keybind key="A-F2">
+      <action name="Execute">
+        <command>pcmanfm-qt</command>
+      </action>
+    </keybind>
+
+    <!-- Alt + F4 でウィンドウを閉じる -->
+    <keybind key="A-F4">
+      <action name="Close"/>
+    </keybind>
+
+    <!-- Ctrl + Alt + BackSpace でログアウト -->
+    <keybind key="C-A-BackSpace">
+      <action name="Exit"/>
+    </keybind>
+  </keyboard>
+</waybox>
+
