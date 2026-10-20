@@ -15,7 +15,7 @@ sudo pacstrap ./mnt base vim sudo
 # waybar, lxqt等に必要なセッションツールは残しています。
 sudo pacman -S --noconfirm --root ./mnt \
     sddm pcmanfm-qt qt6-wayland lxqt-wayland-session \
-    swaylock swayidle waybar qterminal \
+    swaylock swayidle waybar qterminal wlroots0.20 \
     networkmanager network-manager-applet ttf-dejavu noto-fonts-cjk \
     pipewire-pulse alsa-utils pavucontrol zenity cloud-guest-utils \
     e2fsprogs gvfs udisks2 clapper mpv vulkan-tools mesa-docs \
@@ -35,7 +35,7 @@ sudo pacman -S --noconfirm --root ./mnt \
 #        sudo pacman -S --noconfirm --root ./mnt MY-rockchip/\$i
 #fi
 #done
-yes | sudo pacman -U --root ./mnt /wlroots0.20-10:0.20.2-1-aarch64.pkg.tar.xz
+
 yes | sudo pacman -U --root ./mnt /waybox-10:0.2.2-4-aarch64.pkg.tar.xz
 
 # kernel (カスタムカーネルパッケージの流し込み)
