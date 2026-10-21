@@ -54,6 +54,7 @@ done
 
 sudo useradd -m -s /bin/bash -G wheel,users,video "$NEW_USER"
 echo "$NEW_USER:$PASS1" | sudo chpasswd
+sudo ldconfig
 
 
 if [ -f "/etc/mkinitcpio.conf.org" ]; then
