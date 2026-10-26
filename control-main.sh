@@ -3,7 +3,7 @@ set -eE
 
 start_time=`date`
 
-#	./das-u-boot.sh orangepi-5-rk3588s_defconfig
+	./das-u-boot.sh orangepi-5-rk3588s_defconfig
 #	./base_kernel.sh
 	./pkg_waybox.sh
 	./base_rootfs.sh
